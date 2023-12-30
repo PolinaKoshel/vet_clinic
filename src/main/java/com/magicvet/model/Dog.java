@@ -10,6 +10,15 @@ public class Dog extends Pet{
 
     private String size;
 
+    @Override
+    public String toString() {
+        return  getType()
+                + ", age = " + getAge()
+                + ", name = " + getName()
+                + ", sex = " + getSex()
+                + ", size = " + getSize();
+    }
+
     public Dog() {}
 
     public Dog(String size) {

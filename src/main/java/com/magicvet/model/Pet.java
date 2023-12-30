@@ -1,5 +1,7 @@
 package main.java.com.magicvet.model;
 
+import java.util.Objects;
+
 public abstract class Pet {
 
     private String type;
@@ -7,6 +9,31 @@ public abstract class Pet {
     private String age;
     private String name;
     private String ownerName;
+
+    @Override
+    public String toString() {
+        return  getType()
+                + ", age = " + getAge()
+                + ", name = " + getName()
+                + ", sex = " + getSex();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Pet pet = (Pet) o;
+        return Objects.equals(type, pet.type)
+                && Objects.equals(sex, pet.sex)
+                && Objects.equals(age, pet.age)
+                && Objects.equals(name, pet.name)
+                && Objects.equals(ownerName, pet.ownerName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(type, sex, age, name, ownerName);
+    }
 
     public String getType() {
         return type;
