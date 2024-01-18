@@ -1,21 +1,21 @@
-package main.java.com.magicvet;
+package main.java.com.magicvet.test;
 
 import main.java.com.magicvet.comparator.DogSizeComparator;
 import main.java.com.magicvet.model.Dog;
 
 import java.util.Arrays;
 
-public class SandBox {
+public class SandBoxDogSize {
 
     public static void main(String[] args) {
         Dog[] dogs = {
-                new Dog(Dog.M),
-                 new Dog(Dog.S),
-                 new Dog(Dog.XL),
-                 new Dog(Dog.XL),
-                 new Dog(Dog.XS),
-                 new Dog(Dog.S),
-                 new Dog(Dog.L),
+                new Dog(Dog.Size.M),
+                 new Dog(Dog.Size.S),
+                 new Dog(Dog.Size.XL),
+                 new Dog(Dog.Size.XL),
+                 new Dog(Dog.Size.XS),
+                 new Dog(Dog.Size.S),
+                 new Dog(Dog.Size.L),
 
         };
 
