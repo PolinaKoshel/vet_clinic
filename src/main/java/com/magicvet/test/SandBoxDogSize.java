@@ -1,9 +1,9 @@
 package main.java.com.magicvet.test;
 
-import main.java.com.magicvet.comparator.DogSizeComparator;
 import main.java.com.magicvet.model.Dog;
 
 import java.util.Arrays;
+import java.util.Comparator;
 
 public class SandBoxDogSize {
 
@@ -19,7 +19,12 @@ public class SandBoxDogSize {
 
         };
 
-        Arrays.sort(dogs, new DogSizeComparator());
+        Arrays.sort(dogs, new Comparator<Dog>() {
+            @Override
+            public int compare(Dog o1, Dog o2) {
+                return o1.getSize().getValue() - o2.getSize().getValue();
+            }
+        });
 
         for (Dog dog: dogs) {
             System.out.println(dog.getSize());

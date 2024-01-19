@@ -30,8 +30,9 @@ public class PetService {
         Pet pet = type.equals(CAT_TYPE)? new Cat(): new Dog();
         pet.setType(type);
 
-        System.out.print("Age: ");
-        pet.setAge(Main.SCANNER.nextLine());
+        System.out.print("Age by letters: ");
+        String age = Main.SCANNER.nextLine();
+        pet.setAge(Pet.Age.valueOf(age));
 
         System.out.print("Name: ");
         pet.setName(Main.SCANNER.nextLine());

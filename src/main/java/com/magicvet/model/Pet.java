@@ -9,7 +9,7 @@ public abstract class Pet {
 
     private String type;
     private String sex;
-    private String age;
+    private Age age;
     private String name;
     private String ownerName;
     private final LocalDateTime registrationDate = LocalDateTime.now();
@@ -57,14 +57,12 @@ public abstract class Pet {
         this.sex = sex;
     }
 
-    public String getAge() {
-        return age;
-    }
-
-    public void setAge(String age) {
+    public void setAge(Age age) {
         this.age = age;
     }
-
+    public Age getAge() {
+        return age;
+    }
     public String getName() {
         return name;
     }
@@ -79,6 +77,21 @@ public abstract class Pet {
 
     public void setOwnerName(String ownerName) {
         this.ownerName = ownerName;
+    }
+
+    public enum Age {
+
+        one(1), two(2), three(3), four(4), five(5), six(6),
+        seven(7), eight(8), nine(9), ten(10), eleven(11), twelve(12),
+        thirteen(13), fourteen(14), fifteen(15), sixteen(16), seventeen(17),
+        eighteen(18), nineteen(19), twenty(20), unknown(0);
+        private final int value;
+        Age (int value) {
+            this.value = value;
+        }
+        public int getValue() {
+            return value;
+        }
     }
 
 }

@@ -3,7 +3,6 @@ package main.java.com.magicvet.model;
 public class Dog extends Pet{
 
     private Size size;
-    private int age;
 
     @Override
     public String toString() {
@@ -15,22 +14,24 @@ public class Dog extends Pet{
     }
 
     public Dog() {}
-
     public Dog(Size size) {
         this.size = size;
     }
+    public Dog(Age age) { super.setAge(age); }
 
-    public Dog(int age) {
-        this.age = age;
-    }
     public void setSize(Size size) {
         this.size = size;
     }
-
     public Size getSize() {
         return size;
     }
 
+    public void setAge(Age age) {
+        this.setAge(age);
+    }
+    public Age getAge() {
+        return super.getAge();
+    }
     public enum Size {
 
         XS(1),
