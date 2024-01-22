@@ -19,6 +19,8 @@ public class Dog extends Pet{
     }
     public Dog(Age age) { super.setAge(age); }
 
+    public Dog(Health healthState) {super.setHealth(healthState);}
+
     public void setSize(Size size) {
         this.size = size;
     }
@@ -31,6 +33,13 @@ public class Dog extends Pet{
     }
     public Age getAge() {
         return super.getAge();
+    }
+
+    public void setHealth(Health healthState) {
+        this.setHealth(healthState);
+    }
+    public Health getHealth() {
+        return super.getHealth();
     }
     public enum Size {
 

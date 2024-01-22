@@ -12,6 +12,8 @@ public abstract class Pet {
     private Age age;
     private String name;
     private String ownerName;
+
+    private Health healthState;
     private final LocalDateTime registrationDate = LocalDateTime.now();
 
     @Override
@@ -40,6 +42,11 @@ public abstract class Pet {
     public int hashCode() {
         return Objects.hash(type, sex, age, name, ownerName);
     }
+
+    public void setHealth(Health healthState) { this.healthState = healthState; }
+
+    public Health getHealth() { return healthState; }
+
 
     public String getType() {
         return type;
@@ -89,6 +96,22 @@ public abstract class Pet {
         Age (int value) {
             this.value = value;
         }
+        public int getValue() {
+            return value;
+        }
+    }
+
+    public enum Health {
+
+        urgent_request(1),
+        diseased(2),
+        get_well(3),
+        healthy(4),
+        UNKNOWN(0);
+
+        private final int value;
+        Health (int value) { this.value = value; }
+
         public int getValue() {
             return value;
         }
