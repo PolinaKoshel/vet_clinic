@@ -1,21 +1,29 @@
 package main.java.com.magicvet.model;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Objects;
 
 public abstract class Pet {
+    private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("HH:mm dd/MM/yyyy");
 
     private String type;
     private String sex;
-    private String age;
+    private Age age;
     private String name;
     private String ownerName;
 
+    private Health healthState;
+    private final LocalDateTime registrationDate = LocalDateTime.now();
+
     @Override
     public String toString() {
-        return  getType()
+        return  "Pet = " + getType()
                 + ", age = " + getAge()
                 + ", name = " + getName()
-                + ", sex = " + getSex();
+                + ", sex = " + getSex()
+                + ", registration date = " + registrationDate.format(FORMATTER);
+
     }
 
     @Override
@@ -35,6 +43,11 @@ public abstract class Pet {
         return Objects.hash(type, sex, age, name, ownerName);
     }
 
+    public void setHealth(Health healthState) { this.healthState = healthState; }
+
+    public Health getHealth() { return healthState; }
+
+
     public String getType() {
         return type;
     }
@@ -51,14 +64,12 @@ public abstract class Pet {
         this.sex = sex;
     }
 
-    public String getAge() {
-        return age;
-    }
-
-    public void setAge(String age) {
+    public void setAge(Age age) {
         this.age = age;
     }
-
+    public Age getAge() {
+        return age;
+    }
     public String getName() {
         return name;
     }
@@ -73,6 +84,37 @@ public abstract class Pet {
 
     public void setOwnerName(String ownerName) {
         this.ownerName = ownerName;
+    }
+
+    public enum Age {
+
+        one(1), two(2), three(3), four(4), five(5), six(6),
+        seven(7), eight(8), nine(9), ten(10), eleven(11), twelve(12),
+        thirteen(13), fourteen(14), fifteen(15), sixteen(16), seventeen(17),
+        eighteen(18), nineteen(19), twenty(20), unknown(0);
+        private final int value;
+        Age (int value) {
+            this.value = value;
+        }
+        public int getValue() {
+            return value;
+        }
+    }
+
+    public enum Health {
+
+        urgent_request(1),
+        diseased(2),
+        get_well(3),
+        healthy(4),
+        UNKNOWN(0);
+
+        private final int value;
+        Health (int value) { this.value = value; }
+
+        public int getValue() {
+            return value;
+        }
     }
 
 }

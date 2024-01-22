@@ -30,8 +30,9 @@ public class PetService {
         Pet pet = type.equals(CAT_TYPE)? new Cat(): new Dog();
         pet.setType(type);
 
-        System.out.print("Age: ");
-        pet.setAge(Main.SCANNER.nextLine());
+        System.out.print("Age by letters: ");
+        String age = Main.SCANNER.nextLine();
+        pet.setAge(Pet.Age.valueOf(age));
 
         System.out.print("Name: ");
         pet.setName(Main.SCANNER.nextLine());
@@ -40,8 +41,9 @@ public class PetService {
         pet.setSex(Main.SCANNER.nextLine());
 
         if(type.equals(DOG_TYPE))  {
-            System.out.println("Size (xS / S / M / L / xxL): ");
-            ((Dog) pet).setSize(Main.SCANNER.nextLine());
+            System.out.println("Size (XS / S / M / L / XXL): ");
+            String size = Main.SCANNER.nextLine();
+            ((Dog) pet).setSize(Dog.Size.valueOf(size));
         }
         return pet;
     }
