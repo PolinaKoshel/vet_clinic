@@ -20,7 +20,7 @@ public class Client {
                 + ", email = " + email
                 + "\n\tpet = " + pet
                 + "\n}"
-                + "registration date = " + registrationDateClient.format(FORMATTER);
+                + "\nregistration date = " + registrationDateClient.format(FORMATTER);
     }
 
     @Override

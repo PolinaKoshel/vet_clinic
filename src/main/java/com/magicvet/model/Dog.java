@@ -10,7 +10,9 @@ public class Dog extends Pet{
                 + ", age = " + getAge()
                 + ", name = " + getName()
                 + ", sex = " + getSex()
-                + ", size = " + getSize();
+                + ", size = " + getSize()
+                + ", state of health = " + getHealth();
+
     }
 
     public Dog() {}
@@ -28,15 +30,13 @@ public class Dog extends Pet{
         return size;
     }
 
-    public void setAge(Age age) {
-        this.setAge(age);
-    }
+    public void setAge(Age age) { super.setAge(age);}
     public Age getAge() {
         return super.getAge();
     }
 
     public void setHealth(Health healthState) {
-        this.setHealth(healthState);
+        super.setHealth(healthState);
     }
     public Health getHealth() {
         return super.getHealth();
