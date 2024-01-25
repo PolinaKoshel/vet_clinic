@@ -5,25 +5,22 @@ import java.time.format.DateTimeFormatter;
 import java.util.Objects;
 
 public abstract class Pet {
-    private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("HH:mm dd/MM/yyyy");
 
     private String type;
     private String sex;
-    private Age age;
     private String name;
     private String ownerName;
 
+    private Age age;
     private Health healthState;
-    private final LocalDateTime registrationDate = LocalDateTime.now();
 
     @Override
     public String toString() {
-        return  "Pet = " + getType()
+        return  getType()
                 + ", age = " + getAge()
                 + ", name = " + getName()
                 + ", sex = " + getSex()
-                + ", registration date = " + registrationDate.format(FORMATTER);
-
+                + ", state of health = " + getHealth();
     }
 
     @Override

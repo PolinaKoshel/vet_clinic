@@ -8,14 +8,14 @@ public class Cat extends Pet{
     public Cat(Health healthState) {super.setHealth(healthState);}
 
     public void setAge(Age age) {
-        this.setAge(age);
+        super.setAge(age);
     }
     public Age getAge() {
         return super.getAge();
     }
 
     public void setHealth(Health healthState) {
-        this.setHealth(healthState);
+        super.setHealth(healthState);
     }
     public Health getHealth() {
         return super.getHealth();
