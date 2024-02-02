@@ -35,6 +35,10 @@ public class ClientService {
         Client client = new Client();
         client.setEmail(email);
 
+        System.out.print("Location (KYIV / LVIV / ODESA): ");
+        String location = Main.SCANNER.nextLine();
+        client.setLocation(Client.Location.valueOf(location));
+
         System.out.print("First name (at least 3 characters): ");
         client.setFirstName(Main.SCANNER.nextLine());
 
