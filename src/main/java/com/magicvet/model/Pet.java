@@ -16,11 +16,13 @@ public abstract class Pet {
 
     @Override
     public String toString() {
-        return  getType()
+        return  "{ " + getType()
                 + ", age = " + getAge()
                 + ", name = " + getName()
                 + ", sex = " + getSex()
-                + ", state of health = " + getHealth();
+                + ", state of health = " + getHealth()
+                + ", owner name = " + getOwnerName()
+                + " }";
     }
 
     @Override
@@ -85,10 +87,10 @@ public abstract class Pet {
 
     public enum Age {
 
-        one(1), two(2), three(3), four(4), five(5), six(6),
-        seven(7), eight(8), nine(9), ten(10), eleven(11), twelve(12),
-        thirteen(13), fourteen(14), fifteen(15), sixteen(16), seventeen(17),
-        eighteen(18), nineteen(19), twenty(20), unknown(0);
+        ONE(1), TWO(2), THREE(3), FOUR(4), FIVE(5), SIX(6),
+        SEVEN(7), EIGHT(8), NINE(9), TEN(10), ELEVEN(11), TWELVE(12),
+        THIRTEEN(13), FOURTEEN(14), FIFTEEN(15), SIXTEEN(16), SEVENTEEN(17),
+        EIGHTEEN(18), NINETEEN(19), TWENTY(20), UNKNOWN(0);
         private final int value;
         Age (int value) {
             this.value = value;
@@ -96,14 +98,26 @@ public abstract class Pet {
         public int getValue() {
             return value;
         }
+
+        public static Age fromString (String value) {
+            for (Age age: values()) {
+                if(age.toString().equalsIgnoreCase(value)) {
+                    return age;
+                }
+            }
+
+            System.out.println("Unable to parse value '" + value + "'. Using default value: " + UNKNOWN);
+
+            return UNKNOWN;
+        }
     }
 
     public enum Health {
 
-        urgent_request(1),
-        diseased(2),
-        get_well(3),
-        healthy(4),
+        URGENT_REQUEST(1),
+        DISEASED(2),
+        GET_WELL(3),
+        HEALTHY(4),
         UNKNOWN(0);
 
         private final int value;
@@ -111,6 +125,18 @@ public abstract class Pet {
 
         public int getValue() {
             return value;
+        }
+
+        public static Health fromString (String value) {
+            for (Health health: values()) {
+                if(health.toString().equalsIgnoreCase(value)) {
+                    return health;
+                }
+            }
+
+            System.out.println("Unable to parse value '" + value + "'. Using default value: " + UNKNOWN);
+
+            return UNKNOWN;
         }
     }
 
