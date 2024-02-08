@@ -37,7 +37,8 @@ public class ClientService {
 
         System.out.print("Location (KYIV / LVIV / ODESA): ");
         String location = Main.SCANNER.nextLine();
-        client.setLocation(Client.Location.valueOf(location));
+        client.setLocation(Client.Location.fromString(location));
+
 
         System.out.print("First name (at least 3 characters): ");
         client.setFirstName(Main.SCANNER.nextLine());

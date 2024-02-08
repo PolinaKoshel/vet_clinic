@@ -12,13 +12,13 @@ public class SandBoxPetAge {
     public static void main(String[] args) {
 
         Dog[] dogs = {
-                new Dog(Pet.Age.two),
-                new Dog(Pet.Age.seven),
-                new Dog(Pet.Age.five),
-                new Dog(Pet.Age.thirteen),
-                new Dog(Pet.Age.one),
-                new Dog(Pet.Age.fifteen),
-                new Dog(Pet.Age.nine),
+                new Dog(Pet.Age.TWO),
+                new Dog(Pet.Age.SEVEN),
+                new Dog(Pet.Age.FIVE),
+                new Dog(Pet.Age.THIRTEEN),
+                new Dog(Pet.Age.ONE),
+                new Dog(Pet.Age.FIFTEEN),
+                new Dog(Pet.Age.NINE),
         };
 
         Arrays.sort(dogs, new Comparator<Dog>() {
@@ -35,13 +35,13 @@ public class SandBoxPetAge {
         System.out.println("\n");
 
         Cat[] cats = {
-                new Cat(Pet.Age.two),
-                new Cat(Pet.Age.seven),
-                new Cat(Pet.Age.eight),
-                new Cat(Pet.Age.six),
-                new Cat(Pet.Age.one),
-                new Cat(Pet.Age.five),
-                new Cat(Pet.Age.nine),
+                new Cat(Pet.Age.TWO),
+                new Cat(Pet.Age.SEVEN),
+                new Cat(Pet.Age.EIGHT),
+                new Cat(Pet.Age.SIX),
+                new Cat(Pet.Age.ONE),
+                new Cat(Pet.Age.FIVE),
+                new Cat(Pet.Age.NINE),
         };
 
         Arrays.sort(cats, new Comparator<Cat>() {

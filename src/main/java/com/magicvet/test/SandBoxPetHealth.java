@@ -13,12 +13,12 @@ public class SandBoxPetHealth {
 
         Dog[] dogs = {
 
-             new Dog(Pet.Health.healthy),
-             new Dog(Pet.Health.urgent_request),
-             new Dog(Pet.Health.get_well),
-             new Dog(Pet.Health.diseased),
-             new Dog(Pet.Health.diseased),
-             new Dog(Pet.Health.get_well),
+             new Dog(Pet.Health.HEALTHY),
+             new Dog(Pet.Health.URGENT_REQUEST),
+             new Dog(Pet.Health.GET_WELL),
+             new Dog(Pet.Health.DISEASED),
+             new Dog(Pet.Health.DISEASED),
+             new Dog(Pet.Health.GET_WELL),
 
         };
 
@@ -37,11 +37,11 @@ public class SandBoxPetHealth {
 
         Cat[] cats = {
 
-              new Cat(Pet.Health.get_well),
-              new Cat(Pet.Health.urgent_request),
-              new Cat(Pet.Health.diseased),
-              new Cat(Pet.Health.diseased),
-              new Cat(Pet.Health.get_well),
+              new Cat(Pet.Health.GET_WELL),
+              new Cat(Pet.Health.URGENT_REQUEST),
+              new Cat(Pet.Health.DISEASED),
+              new Cat(Pet.Health.DISEASED),
+              new Cat(Pet.Health.GET_WELL),
 
         };
 
