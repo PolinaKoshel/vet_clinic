@@ -5,6 +5,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 
 public class Client {
 
@@ -12,7 +13,7 @@ public class Client {
     private String firstName;
     private String lastName;
     private String email;
-    private List<Pet> pets = new ArrayList<>();
+    private List<Pet> pets = new ArrayList<Pet>();
     private final LocalDateTime registrationDateClient = LocalDateTime.now();
     private Location location;
     @Override

@@ -56,6 +56,7 @@ public class EntityRegister {
         System.out.println("Adding a new pet.");
 
         Pet pet = petService.registerNewPet();
+
         if (pet != null) {
             client.addPet(pet);
             pet.setOwnerName(client.getFirstName() + " " + client.getLastName());
