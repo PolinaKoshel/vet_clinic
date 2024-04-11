@@ -1,10 +1,10 @@
-package main.java.com.magicvet.component;
+package com.magicvet.component;
 
-import main.java.com.magicvet.Main;
-import main.java.com.magicvet.model.Client;
-import main.java.com.magicvet.model.Pet;
-import main.java.com.magicvet.service.ClientService;
-import main.java.com.magicvet.service.PetService;
+import com.magicvet.Main;
+import com.magicvet.model.Client;
+import com.magicvet.model.Pet;
+import com.magicvet.service.ClientService;
+import com.magicvet.service.PetService;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -64,6 +64,7 @@ public class EntityRegister {
         }
     }
 
+    //TODO: refactor verifyRepeating to hasNextClient
     private boolean verifyRepeating(String message) {
         System.out.println(message);
 

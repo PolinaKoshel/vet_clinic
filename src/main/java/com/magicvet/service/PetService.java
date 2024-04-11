@@ -1,9 +1,9 @@
-package main.java.com.magicvet.service;
+package com.magicvet.service;
 
-import main.java.com.magicvet.Main;
-import main.java.com.magicvet.model.Cat;
-import main.java.com.magicvet.model.Dog;
-import main.java.com.magicvet.model.Pet;
+import com.magicvet.Main;
+import com.magicvet.model.Cat;
+import com.magicvet.model.Dog;
+import com.magicvet.model.Pet;
 
 import java.util.Optional;
 

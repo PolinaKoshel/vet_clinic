@@ -1,16 +1,21 @@
-package main.java.com.magicvet;
+package com.magicvet;
 
-import main.java.com.magicvet.component.ApplicationRunner;
-
+import com.magicvet.component.ApplicationRunner;
 import java.util.Scanner;
 
 public class Main {
-    public static Scanner SCANNER = new Scanner(System.in);
-    public static void main(String[] args) {
+       public static Scanner SCANNER;
 
-        ApplicationRunner runner = new ApplicationRunner();
-        runner.run();
+        public Main() {
+        }
+
+        public static void main(String[] args) {
+            ApplicationRunner runner = new ApplicationRunner();
+            runner.run();
+        }
+
+        static {
+            SCANNER = new Scanner(System.in);
+        }
     }
 
-
-}

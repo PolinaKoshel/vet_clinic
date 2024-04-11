@@ -1,4 +1,4 @@
-package main.java.com.magicvet.component;
+package com.magicvet.component;
 
 public class ApplicationRunner {
 
