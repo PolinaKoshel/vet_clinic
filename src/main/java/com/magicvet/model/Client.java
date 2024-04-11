@@ -1,4 +1,4 @@
-package main.java.com.magicvet.model;
+package com.magicvet.model;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

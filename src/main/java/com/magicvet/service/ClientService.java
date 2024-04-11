@@ -1,15 +1,16 @@
-package main.java.com.magicvet.service;
+package com.magicvet.service;
 
-import main.java.com.magicvet.Main;
-import main.java.com.magicvet.model.Client;
+import com.magicvet.Main;
+import com.magicvet.model.Client;
 import org.w3c.dom.ls.LSOutput;
 
 import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class ClientService {
+public class ClientService { // FIXME: add interface ClientService (SOLID)
 
+    // TODO: change String to the Pattern
     private static final String EMAIL_PATTERN = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$";
     private static final String NAME = "^[a-zA-Z-]{3,}";
 
@@ -57,6 +58,11 @@ public class ClientService {
             return buildClient(email);
         }
     }
+
+    //TODO: all statics method refactors to validator diretory and make not static.
+    // I should make interface: ValidationService and Override the methods.
+    // Interface ValidationService make in service package. Add the package validation
+    // Implamantation for ValidationService make in package impl
 
     private static boolean isEmailValid(String email) {
         Pattern pattern = Pattern.compile(EMAIL_PATTERN);

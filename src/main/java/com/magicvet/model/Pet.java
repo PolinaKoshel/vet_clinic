@@ -1,4 +1,4 @@
-package main.java.com.magicvet.model;
+package com.magicvet.model;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -112,6 +112,8 @@ public abstract class Pet {
         }
     }
 
+    // TODO: add shortcart. For example, URGENT_REQUEST press 1, DISEASED press 2
+    // TODO: add method findByValue (search by value and return health)
     public enum Health {
 
         URGENT_REQUEST(1),

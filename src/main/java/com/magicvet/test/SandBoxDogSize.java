@@ -1,6 +1,6 @@
-package main.java.com.magicvet.test;
+package com.magicvet.test;
 
-import main.java.com.magicvet.model.Dog;
+import com.magicvet.model.Dog;
 
 import java.util.Arrays;
 import java.util.Comparator;
